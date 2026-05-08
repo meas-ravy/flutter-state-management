@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_journey/provider/dark_mode/theme_toggle_button.dart';
 import 'package:flutter_journey/provider/shop_cart/cart_list_screen.dart';
 import 'package:flutter_journey/provider/shop_cart/cart_provider.dart';
 import 'package:provider/provider.dart';
@@ -44,6 +45,7 @@ class CartScreen extends StatelessWidget {
               ),
             ],
           ),
+          ThemeToggleButton(),
         ],
       ),
       body: ListView.builder(
