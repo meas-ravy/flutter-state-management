@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_journey/provider/rider_delivery/home_page.dart';
+import 'package:flutter_journey/provider/shop_cart/cart_provider.dart';
+import 'package:flutter_journey/provider/shop_cart/cart_screen.dart';
+import 'package:provider/provider.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(ChangeNotifierProvider(create: (_) => CartProvider(), child: MyApp()));
 }
 
 class MyApp extends StatelessWidget {
@@ -13,7 +15,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(colorScheme: .fromSeed(seedColor: Colors.deepPurple)),
-      home: const HomePage(),
+      home: const CartScreen(),
     );
   }
 }
